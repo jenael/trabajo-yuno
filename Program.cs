@@ -28,7 +28,7 @@ class Program
                         ParesImpares();
                         break;
                     case 2:
-                        //TablaDeMultiplicar();
+                        TablaDeMultiplicar();
                         break;
                     case 3:
                         //Factorial();
@@ -93,5 +93,29 @@ class Program
         } while (Console.ReadLine()?.Trim().ToLower() == "s");
 
         Console.Clear(); 
-        
-    
+    }
+ static void TablaDeMultiplicar()
+    {
+        do
+        {
+            Console.Clear(); 
+            Console.Write("Ingrese un número entero positivo para mostrar su tabla de multiplicar: ");
+            string? input = Console.ReadLine();
+            if (!string.IsNullOrEmpty(input) && int.TryParse(input, out int numero))
+            {
+                for (int i = 1; i <= 12; i++)
+                {
+                    Console.WriteLine($"{numero}x{i} = {numero * i}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Entrada no válida. Por favor, ingrese un número entero positivo.");
+            }
+
+            Console.Write("¿Desea realizar otra operación en Tabla de Multiplicar? (s/n): ");
+        } while (Console.ReadLine()?.Trim().ToLower() == "s");
+
+        Console.Clear(); 
+    }
+}
