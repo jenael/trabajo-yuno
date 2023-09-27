@@ -31,13 +31,13 @@ class Program
                         TablaDeMultiplicar();
                         break;
                     case 3:
-                        //Factorial();
+                        Factorial();
                         break;
                     case 4:
-                        //NumerosPrimos();
+                        NumerosPrimos();
                         break;
                     case 5:
-                        //Fibonacci();
+                        Fibonacci();
                         break;
                     case 6:
                         Console.WriteLine("¡Adios...!");
