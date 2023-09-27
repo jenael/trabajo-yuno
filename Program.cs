@@ -202,5 +202,34 @@ class Program
         }
         return factorial;
     }
-    }
-    
+     static void Fibonacci()
+    {
+        do
+        {
+            Console.Clear(); 
+            Console.Write("Ingrese la cantidad de interaciones para la sucesión de Fibonacci: ");
+            string? input = Console.ReadLine();
+            if (!string.IsNullOrEmpty(input) && int.TryParse(input, out int iteraciones) && iteraciones > 0)
+            {
+                int a = 0, b = 1;
+                Console.Write("Sucesión de Fibonacci: ");
+                for (int i = 0; i < iteraciones; i++)
+                {
+                    Console.Write(a + " ");
+                    int temp = a;
+                    a = b;
+                    b = temp + b;
+                }
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Entrada no válida. ingrese un número entero positivo mayor que 0.");
+            }
+
+            Console.Write("¿Desea generar otra sucesión de Fibonacci? (s/n): ");
+        } while (Console.ReadLine()?.Trim().ToLower() == "s");
+
+        Console.Clear(); 
+}
+}
